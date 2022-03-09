@@ -1,6 +1,15 @@
 public class ArrayCalculations {
 
     public static int rowSum(int[][] arr, int row) {
+        int total = 0;
+        if (row>arr.length-1) {
+            return -1;
+        }
+        else {
+            for (int i : arr[row]){
+                total += i;
+            }
+        }
         // create a variable to keep track of the total
 
 
@@ -20,6 +29,15 @@ public class ArrayCalculations {
     }
 
     public static int columnSum(int[][] arr, int col) {
+        int total = 0;
+        if(col>arr.length-1){
+            return -1;
+        }
+        else {
+            for (int i =0; i<arr.length; i++){
+                total+= arr[i][col];
+            }
+        }
         // create a variable to keep track of the total
 
 
@@ -34,12 +52,23 @@ public class ArrayCalculations {
          */
 
         // return the total
-        return 0;
+        return total;
     }
 
     public static int diagonalSum(int[][] arr, int direction) {
+        int total = 0;
+        if (direction==0){
+            for (int i = 0; i<arr.length; i++){
+                total += arr[i][i];
+            }
+        }
+        if (direction==1){
+            for (int i = arr.length-1; i>= 0; i--){
+                total += arr[i][i];
+            }
+        }
 
-        return 0;
+        return total;
 
     }
 

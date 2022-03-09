@@ -1,9 +1,10 @@
 import java.awt.*;
+import java.io.FileNotFoundException;
 
 public class Driver
 {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws FileNotFoundException {
 
         //construct DrawingPanel, and get its Graphics context
         DrawingPanel panel = new DrawingPanel(840, 480);
